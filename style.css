@@ -1384,13 +1384,14 @@ a {
 
 /* AJUSTES NO VÍDEO DO YOUTUBE */
 .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
     width: 97%;
     max-width: 97%;
     margin: 0 auto;
-    position: relative;
-    
-    height: 0;
-    overflow: hidden;
+    z-index: 1; /* Garantir que esteja acima de outros elementos */
 }
 
 .video-container iframe {
@@ -1399,7 +1400,9 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius-lg);
+    border: none;
+    z-index: 2; /* Maior que o container para garantir que os controles funcionem */
+    pointer-events: auto !important; /* Forçar eventos de pointer */
 }
 
 /* AJUSTES NO BENEFITS GRID */
