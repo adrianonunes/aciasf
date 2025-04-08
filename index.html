@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACIASF - Associação Comercial e Industrial de São Fidélis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header Atualizado -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="images/logoaciasf.png" alt="ACIASF Logo" class="logo">
+                
+                <!-- Ícones sociais movidos para baixo do logo -->
+                <div class="logo-social-icons">
+                    <a href="https://www.youtube.com/@aciasf" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/a_ciasf/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/aciasf/" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5522988770418?text=Olá!%20Gostaria%20de%20mais%20informações." class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Novos botões de sistema no lugar dos ícones sociais -->
+            <div class="system-buttons">
+                <a href="https://associado.scpc.inf.br/?entidade=28400" class="system-button" target="_blank">
+                    <img src="images/SCPC.png" alt="SCPC Sistema" title="Acesse o Sistema SCPC">
+                </a>
+                <a href="https://login.spcbrasil.com.br/realms/associado/protocol/openid-connect/auth?response_type=code&client_id=spcjava&scope=openid+email+profile&redirect_uri=https%3A%2F%2Fsistema.spc.org.br%2Fspc%2Fopenid_connect_login&nonce=b0f9969a4e9&state=2d2ad72c8d335" class="system-button" target="_blank">
+                    <img src="images/spcbrasil.png" alt="SPC Brasil" title="Acesse o Sistema SPC Brasil">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Banner Rotativo -->
+    <div class="banner-container">
+        <div class="banner active-banner" style="background-image: url('images/banners/banner1.png');">
+            <div class="banner-content">
+                <h3 class="banner-title">Fortaleça seu negócio com a ACIASF</h2>
+                <p class="banner-description">Juntos somos mais fortes. Associe-se e descubra um mundo de benefícios para sua empresa.</p>
+                <a href="#join" class="btn btn-accent">Associe-se agora</a>
+            </div>
+        </div>
+        <div class="banner" style="background-image: url('images/banners/banner2.png');">
+            <div class="banner-content">
+                <h3 class="banner-title">Consultoria e suporte completo</h2>
+                <p class="banner-description">Conte com nossa assessoria jurídica, consultas e diversas vantagens exclusivas.</p>
+                <a href="#benefits" class="btn btn-accent">Veja os benefícios</a>
+            </div>
+        </div>
+        <div class="banner" style="background-image: url('images/banners/banner3.png');">
+            <div class="banner-content">
+                <h3 class="banner-title">Faça parte da maior rede empresarial da região</h2>
+                <p class="banner-description">Amplie seus contatos, fortaleça parcerias e desenvolva seu negócio.</p>
+                <a href="#sebrae" class="btn btn-accent">Nossos parceiros</a>
+            </div>
+        </div>
+        
+        <div class="banner-dots">
+            <span class="dot active-dot" onclick="currentBanner(0)"></span>
+            <span class="dot" onclick="currentBanner(1)"></span>
+            <span class="dot" onclick="currentBanner(2)"></span>
+        </div>
+    </div>
+    <!-- Seção de Vídeo -->
+    <section class="video-section" id="about">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-building"></i>Quem Somos</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/SDHrog7R9fA?rel=0&autoplay=0" 
+                    title="ACIASF - Quem Somos" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Benefícios -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-gift"></i>Benefícios para os Associados</h2>
+            
+            <!-- Serviços Gratuitos -->
+            <div class="benefit-category">
+                <h3 class="category-title">
+                    <i class="fas fa-star"></i>Serviços Gratuitos
+                </h3>
+                
+                <div class="benefits-grid">                    
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="benefit-title">Consultas CPF/CNPJ</h3>
+                        <p class="benefit-description">Busca do número do CPF no sistema SPC Brasil/Serasa e consultas de informações no sistema do SCPC Boa Vista para verificação de crédito de clientes.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-eraser"></i>
+                        </div>
+                        <h3 class="benefit-title">Serviço de Exclusão</h3>
+                        <p class="benefit-description">Serviço de exclusão do cliente no sistema de negativação, agilizando processos administrativos e garantindo conformidade legal.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="benefit-title">Consultas Gratuitas</h3>
+                        <p class="benefit-description">05 consultas mensais (simples – Acerta) gratuitas no sistema do SCPC Boa Vista, permitindo análise de risco antes de fechar negócios.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Utilização dos Espaços -->
+            <div class="benefit-category category-alt">
+                <h3 class="category-title">
+                    <i class="fas fa-building"></i>Utilização dos Espaços Gratuitos 
+                </h3>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h3 class="benefit-title">Sala Multimídia</h3>
+                        <p class="benefit-description">Climatizada, equipada com cadeiras universitárias, TV e quadro de vidro. Disponível em horário comercial (das 08h às 18h) mediante agendamento prévio.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="benefit-title">Auditório</h3>
+                        <p class="benefit-description">Espaço com 90 lugares, equipado com datashow, telão, som, microfones, ventiladores e banheiros. Disponível mediante agendamento de segunda a sábado, nos períodos da manhã e noite.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3 class="benefit-title">Salão para Festas</h3>
+                        <p class="benefit-description">Espaço equipado com mesas, cadeiras, fogão, freezer e ampla cozinha com bancada para realização de eventos corporativos ou celebrações.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="benefit-title">Divulgação</h3>
+                        <p class="benefit-description">Propaganda do seu comércio e produtos nas redes sociais da ACIASF - Site, Instagram e na Página do Facebook, ampliando seu alcance digital.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parceria com o Sebrae -->
+            <div class="benefit-category" id="sebrae">
+                <h3 class="category-title">
+                    <i class="fas fa-handshake"></i>Parceria com o Sebrae
+                </h3>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="benefit-title">Capacitação</h3>
+                        <p class="benefit-description">Cursos, oficinas e palestras ministradas por instrutores qualificados e capacitados, abordando temas relevantes para o desenvolvimento empresarial.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-store-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Visitas Técnicas</h3>
+                        <p class="benefit-description">Visitas quinzenais de consultores especializados, pré-agendadas aos estabelecimentos dos associados, para orientação personalizada.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Convênios e Serviços Adicionais -->
+            <div class="benefit-category category-alt">
+                <h3 class="category-title">
+                    <i class="fas fa-percentage"></i>Convênios e Serviços Adicionais
+                </h3>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="benefit-title">SEGMED</h3>
+                        <p class="benefit-description">Tabela especial para associados na utilização dos serviços da SEGMED - Medicina do Trabalho, com descontos exclusivos.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="benefit-title">Faculdade Censupeg</h3>
+                        <p class="benefit-description">Descontos especiais em cursos de graduação e pós-graduação para você e seus colaboradores.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon-container">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="benefit-title">Serviço de Inclusão</h3>
+                        <p class="benefit-description">Inclusão de clientes inadimplentes no sistema do SCPC Boa Vista por apenas R$5,00 por registro.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Investimento -->
+            <div class="investment-container" id="join">
+                <div class="investment-card">
+                    <h3 class="investment-title">
+                        <i class="fas fa-coins"></i> Seu Investimento
+                    </h3>
+                    
+                    <div class="investment-price-container">
+                        <div class="price-card">
+                            <div class="price-label">ME/EPP e outros portes</div>
+                            <div class="price-value">R$71,60</div>
+                            <div class="price-period">por mês</div>
+                        </div>
+                        
+                        <div class="price-card">
+                            <div class="price-label">MEI – Micro Empreendedor Individual</div>
+                            <div class="price-value">R$55,00</div>
+                            <div class="price-period">por mês</div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/5522988770418?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank">
+                        <button class="join-button">
+                          <i class="fas fa-handshake"></i> Associe-se Agora!
+                        </button>
+                    </a>                      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Endereço</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av Sete de Setembro, 156, Altos, Centro</p>
+                    <p>São Fidélis - RJ</p>
+                </div>
+                <div class="footer-info">
+                    <h3>Horário de Funcionamento</h3>
+                    <p><i class="far fa-clock"></i> Segunda a Sexta: 08h às 17h</p>
+                    <p><i class="far fa-clock"></i> Sábado: 08h às 12h</p>
+                </div>
+                <div class="footer-info">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i>(22)98877-0418</p>
+                    <p><i class="fas fa-envelope"></i> contato@aciasf.com.br</p>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 ACIASF - Associação Comercial e Industrial de São Fidélis. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5522988770418?text=Olá!%20Gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
